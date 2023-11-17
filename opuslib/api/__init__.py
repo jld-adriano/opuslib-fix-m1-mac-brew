@@ -13,13 +13,6 @@ __author__ = 'Никита Кузнецов <self@svartalf.info>'
 __copyright__ = 'Copyright (c) 2012, SvartalF'
 __license__ = 'BSD 3-Clause License'
 
-
-lib_location = find_library('opus')
-
-if lib_location is None:
-    raise Exception(
-        'Could not find Opus library. Make sure it is installed.')
-
 libopus = ctypes.CDLL("/opt/homebrew/Cellar/opus/1.4/lib/libopus.dylib")
 
 c_int_pointer = ctypes.POINTER(ctypes.c_int)
