@@ -20,7 +20,7 @@ if lib_location is None:
     raise Exception(
         'Could not find Opus library. Make sure it is installed.')
 
-libopus = ctypes.CDLL(lib_location)
+libopus = ctypes.CDLL("/opt/homebrew/Cellar/opus/1.4/lib/libopus.dylib")
 
 c_int_pointer = ctypes.POINTER(ctypes.c_int)
 c_int16_pointer = ctypes.POINTER(ctypes.c_int16)
